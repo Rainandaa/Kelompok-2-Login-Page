@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fams</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="csslogin.css">
+    <video autoplay muted loop id="bg-video">
+        <source src="pizzavid.mp4" type="video/mp4">
+      </video> 
+</head>
+<body>
+    <div class="content">
+  <div class="flex-container">
+    <div class="welcome-message">
+      <h1>Benvenuto, Divertiti!</h1>
+    </div>
+    <div class="form-container">
+      <form id="signin">
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="email" />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="password" />
+        </div>
+        <div class="submit" style="margin-left: 145px;"> 
+          <a href="#" id="submit">login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $("#submit").click(function() {
+      $("#signin").slideUp(function() {
+        $(".form-container").hide();
+        $(".welcome-message").slideDown(function() {
+          $(".welcome-message").fadeTo(400, 1);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
